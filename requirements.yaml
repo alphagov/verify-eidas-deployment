@@ -1,4 +1,0 @@
-dependencies:
-- name: proxy-node
-  version: "0.2.0"
-  repository: "file://../verify-proxy-node/proxy-node-chart"
