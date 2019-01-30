@@ -1,0 +1,10 @@
+global:
+  proxy-node-gateway:
+    image: registry.tools.verify.govsvc.uk/eidas/gateway:v0.0.0-dev-7a9f5bb
+  proxy-node-translator:
+    image: registry.tools.verify.govsvc.uk/eidas/translator:v0.0.0-dev-a4d7a44
+  stub-connector:
+    image: registry.tools.verify.govsvc.uk/eidas/stub-connector:v0.0.0-dev-a4d7a44
+  softhsm:
+    image: registry.tools.verify.govsvc.uk/eidas/softhsm:v0.0.0-dev-4cffd22
+
