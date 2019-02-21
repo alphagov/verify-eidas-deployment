@@ -20,4 +20,4 @@ spec:
           - path: /
             backend:
               serviceName: {{ .Release.Name }}-stub-connector
-              servicePort: 80
+              servicePort: 31100

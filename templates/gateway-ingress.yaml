@@ -19,5 +19,5 @@ spec:
         paths:
           - path: /
             backend:
-              serviceName: {{ .Release.Name }}-gateway
-              servicePort: 6100
+              serviceName: {{ .Release.Name }}-proxy-node-gateway
+              servicePort: 31200

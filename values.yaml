@@ -1,0 +1,19 @@
+proxy-node:
+  softhsm:
+    signingKeyPIN: "fake:user"
+    signingKeyLabel: vfpn-uk-signing
+    signingKeyToken: vfpn-uk-signing
+    signingKeySlot: "0"
+    signingKeyID: DEF0
+    signingKeySOPIN: "fake:user"
+  cloudhsm-client:
+    hsmIP: "10.0.1.5"
+    customerCaCrt: |
+      -----BEGIN CERTIFICATE-----
+      MIIDWTCCAkGgAwI...
+      -----END CERTIFICATE-----
+  metadata-controller:
+    hsmSigningCert: |
+      -----BEGIN CERTIFICATE-----
+      MIIDWTCCAkGgAwI...
+      -----END CERTIFICATE-----
