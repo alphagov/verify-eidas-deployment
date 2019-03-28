@@ -1,0 +1,61 @@
+global:
+  cluster:
+    name:
+    domain:
+
+connector:
+  host:
+  entityID:
+  metadataURL:
+
+esp:
+  replicaCount: 1
+  image:
+    repository: registry.tools.verify.govsvc.uk/eidas/parser
+    tag: v0.0.0-dev-22c0082
+    pullPolicy: IfNotPresent
+
+vmc:
+  image:
+    repository: registry.tools.verify.govsvc.uk/eidas/metadata-controller
+    tag: v0.0.0-dev-763e6fd
+    pullPolicy: IfNotPresent
+
+gateway:
+  replicaCount: 1
+  image:
+    repository: registry.tools.verify.govsvc.uk/eidas/gateway
+    tag: v0.0.0-dev-22c0082
+    pullPolicy: IfNotPresent
+
+translator:
+  replicaCount: 1
+  image:
+    repository: registry.tools.verify.govsvc.uk/eidas/translator
+    tag: v0.0.0-dev-22c0082
+    pullPolicy: IfNotPresent
+
+hsm:
+  IP:
+  customerCA:
+  user:
+  password:
+  image:
+    repository: registry.tools.verify.govsvc.uk/eidas/cloudhsm
+    tag: v0.0.0-dev-22c0082
+    pullPolicy: IfNotPresent
+
+stubConnector:
+  enabled: false
+  replicaCount: 1
+  image:
+    repository: registry.tools.verify.govsvc.uk/eidas/stub-connector
+    tag: v0.0.0-dev-22c0082
+    pullPolicy: IfNotPresent
+
+vsp:
+  replicaCount: 1
+  image:
+    repository: registry.tools.verify.govsvc.uk/eidas/verify-service-provider
+    tag: v0.0.0-dev-2503371
+    pullPolicy: IfNotPresent
