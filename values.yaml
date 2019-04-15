@@ -21,6 +21,7 @@ gateway:
     repository: registry.tools.verify.govsvc.uk/eidas/gateway
     tag: v0.0.0-dev-2626120
     pullPolicy: IfNotPresent
+  errorPageURL: https://www.signin.service.gov.uk/proxy-node-error
 
 hsm:
   IP:
