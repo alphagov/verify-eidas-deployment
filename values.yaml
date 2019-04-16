@@ -12,27 +12,14 @@ esp:
   replicaCount: 1
   image:
     repository: registry.tools.verify.govsvc.uk/eidas/parser
-    tag: v0.0.0-dev-22c0082
-    pullPolicy: IfNotPresent
-
-vmc:
-  image:
-    repository: registry.tools.verify.govsvc.uk/eidas/metadata-controller
-    tag: v0.0.0-dev-763e6fd
+    tag: v0.0.0-dev-2626120
     pullPolicy: IfNotPresent
 
 gateway:
   replicaCount: 1
   image:
     repository: registry.tools.verify.govsvc.uk/eidas/gateway
-    tag: v0.0.0-dev-22c0082
-    pullPolicy: IfNotPresent
-
-translator:
-  replicaCount: 1
-  image:
-    repository: registry.tools.verify.govsvc.uk/eidas/translator
-    tag: v0.0.0-dev-22c0082
+    tag: v0.0.0-dev-2626120
     pullPolicy: IfNotPresent
 
 hsm:
@@ -42,7 +29,14 @@ hsm:
   password:
   image:
     repository: registry.tools.verify.govsvc.uk/eidas/cloudhsm
-    tag: v0.0.0-dev-22c0082
+    tag: v0.0.0-dev-2626120
+    pullPolicy: IfNotPresent
+
+translator:
+  replicaCount: 1
+  image:
+    repository: registry.tools.verify.govsvc.uk/eidas/translator
+    tag: v0.0.0-dev-2626120
     pullPolicy: IfNotPresent
 
 stubConnector:
@@ -50,12 +44,18 @@ stubConnector:
   replicaCount: 1
   image:
     repository: registry.tools.verify.govsvc.uk/eidas/stub-connector
-    tag: v0.0.0-dev-22c0082
+    tag: v0.0.0-dev-2626120
+    pullPolicy: IfNotPresent
+
+vmc:
+  image:
+    repository: registry.tools.verify.govsvc.uk/eidas/metadata-controller
+    tag: v0.0.0-dev-a23f39e
     pullPolicy: IfNotPresent
 
 vsp:
   replicaCount: 1
   image:
     repository: registry.tools.verify.govsvc.uk/eidas/verify-service-provider
-    tag: v0.0.0-dev-2503371
+    tag: v0.0.0-dev-d97a7c9
     pullPolicy: IfNotPresent
