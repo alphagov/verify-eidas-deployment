@@ -55,3 +55,4 @@ spec:
           value: http://{{ .Release.Name }}-vsp/
         - name: PROXY_NODE_ERROR_PAGE_URI
           value: {{ .Values.gateway.errorPageURL }}
+
