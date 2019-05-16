@@ -51,7 +51,7 @@ stubConnector:
 vmc:
   image:
     repository: registry.tools.verify.govsvc.uk/eidas/metadata-controller@sha256
-    tag: d6cbd656a5fbc606a08bc39027b933055b097dc8d40347e0b203bfa318a86a98
+    tag: 2008324bb25cecbdf950f556ced7da1fef19be604e342fedb17bee7fe011a9fd
     pullPolicy: IfNotPresent
   secretName: test-vmc
 
