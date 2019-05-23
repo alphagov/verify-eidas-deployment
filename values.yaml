@@ -24,10 +24,6 @@ gateway:
   errorPageURL: https://www.signin.service.gov.uk/proxy-node-error
 
 hsm:
-  IP:
-  customerCA:
-  user:
-  password:
   image:
     repository: registry.tools.verify.govsvc.uk/eidas/cloudhsm@sha256
     tag: 0b1adb00b1d65f5dd43449cd12c1f1ccca543455714d3e52bde0972e3bdee3d0
@@ -47,13 +43,6 @@ stubConnector:
     repository: registry.tools.verify.govsvc.uk/eidas/stub-connector@sha256
     tag: 4af88e30aa699a3b10da92f54f522fed97f3273520f5ef364bcaa4c6f608d251
     pullPolicy: IfNotPresent
-
-vmc:
-  image:
-    repository: registry.tools.verify.govsvc.uk/eidas/metadata-controller@sha256
-    tag: 2008324bb25cecbdf950f556ced7da1fef19be604e342fedb17bee7fe011a9fd
-    pullPolicy: IfNotPresent
-  secretName: test-vmc
 
 vsp:
   replicaCount: 1
