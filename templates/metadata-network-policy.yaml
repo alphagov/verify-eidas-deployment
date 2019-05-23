@@ -5,7 +5,7 @@ metadata:
 spec:
   podSelector:
     matchLabels:
-      deployment: {{ .Release.Name }}-proxy-metadata-deployment
+      deployment: {{ .Release.Name }}-proxy-metadata
   policyTypes:
   - Ingress
   ingress:
