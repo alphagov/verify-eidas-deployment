@@ -12,17 +12,13 @@ spec:
     - from:
       - podSelector:
           matchLabels:
-            app: nginx-ingress
-            release: ingress-system
+            istio: ingressgateway
         namespaceSelector:
           matchLabels:
-            namespace: ingress-system
+            namespace: istio-system
 {{ if .Values.stubConnector.enabled }}
       - podSelector:
           matchLabels:
             app.kubernetes.io/name: connector
             app.kubernetes.io/instance: {{ .Release.Name }}
 {{ end }}
-      ports:
-      - protocol: TCP
-        port: 80
