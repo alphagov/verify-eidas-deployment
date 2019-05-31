@@ -1,53 +1,47 @@
+connector:
+  entityID: null
+  host: null
+  metadataURL: null
+esp:
+  image:
+    pullPolicy: IfNotPresent
+    repository: registry.london.verify.govsvc.uk/eidas/parser@sha256
+    tag: c3095cc1e8b6f12af58912280dc645f72533a1b62f64abe723493fb798a374f3
+  replicaCount: 1
+gateway:
+  errorPageURL: https://www.signin.service.gov.uk/proxy-node-error
+  image:
+    pullPolicy: IfNotPresent
+    repository: registry.london.verify.govsvc.uk/eidas/gateway@sha256
+    tag: 8110f38b5f25e2171e314daf8caa2a0fdf5c0d28a0764c5fd5e55bef6f63d987
+  replicaCount: 1
 global:
   cluster:
-    name:
-    domain:
-
-connector:
-  host:
-  entityID:
-  metadataURL:
-
-esp:
-  replicaCount: 1
-  image:
-    repository: registry.tools.verify.govsvc.uk/eidas/parser@sha256
-    tag: f33a370c0a7be474ab84aa0fb882925f299054aff3199d42ba72fc9eb7b2ed6f
-    pullPolicy: IfNotPresent
-
-gateway:
-  replicaCount: 1
-  image:
-    repository: registry.tools.verify.govsvc.uk/eidas/gateway@sha256
-    tag: 1975031b78f5df2611e00b8cf9e264106d8a43628e52f1499119f33278048bb5
-    pullPolicy: IfNotPresent
-  errorPageURL: https://www.signin.service.gov.uk/proxy-node-error
-
+    domain: null
+    name: null
 hsm:
   image:
-    repository: registry.tools.verify.govsvc.uk/eidas/cloudhsm@sha256
-    tag: 0b1adb00b1d65f5dd43449cd12c1f1ccca543455714d3e52bde0972e3bdee3d0
     pullPolicy: IfNotPresent
-
-translator:
-  replicaCount: 1
-  image:
-    repository: registry.tools.verify.govsvc.uk/eidas/translator@sha256
-    tag: fd6ada0159c1cc5415cd51ffcdd41fc3f19c4cb827cafdecf9134a372024bc4a
-    pullPolicy: IfNotPresent
-
+    repository: registry.london.verify.govsvc.uk/eidas/cloudhsm@sha256
+    tag: ac1a4718be4fe40c13aec55c908d989718fd30264c5c31a54e41293c439832cc
 stubConnector:
   enabled: false
-  replicaCount: 1
   image:
-    repository: registry.tools.verify.govsvc.uk/eidas/stub-connector@sha256
-    tag: 4af88e30aa699a3b10da92f54f522fed97f3273520f5ef364bcaa4c6f608d251
     pullPolicy: IfNotPresent
-
+    repository: registry.london.verify.govsvc.uk/eidas/stub-connector@sha256
+    tag: 04213e5718e5a5afa5b0465bae96fdfbbb565a4f5ffa0e991430513172ed4cc4
+  replicaCount: 1
+translator:
+  image:
+    pullPolicy: IfNotPresent
+    repository: registry.london.verify.govsvc.uk/eidas/translator@sha256
+    tag: 47c84ff97fd74f637b9c8bdb407c3e6098c98c158cc45178f2c13a066cea7537
+  replicaCount: 1
 vsp:
-  replicaCount: 1
   image:
-    repository: registry.tools.verify.govsvc.uk/eidas/verify-service-provider@sha256
-    tag: 632143dcb87423ff000b9fcd53a14b101eacfa4d1a19a14f611ee6a6c2ee0e97
     pullPolicy: IfNotPresent
+    repository: registry.london.verify.govsvc.uk/eidas/verify-service-provider@sha256
+    tag: 6bb7f3383b9ec45a83cd176429e5774f73d2fc734888eb49ba4abfa62e28ef9d
+  replicaCount: 1
   secretName: test-vsp
+
